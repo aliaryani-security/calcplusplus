@@ -36,6 +36,7 @@ void get_op () {
         << "2. Subtraction" << endl 
         << "3. Multiplication" << endl
         << "4. Division" << endl;
+    cout << "=> ";
     cin >> opt;
     int num1 = get_num(true);
     int num2 = get_num(false);
@@ -59,6 +60,7 @@ void get_op () {
 }
 
 int main() {
+    get_op();
 
     return 0;
 }
