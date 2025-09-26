@@ -1,21 +1,6 @@
+#include <functional>
 #include <iostream>
 using namespace std;
-
-void add (float num1, float num2) {
-   cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
-}
-
-void subtract(float num1, float num2) {
-    cout << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
-}
-
-void multiply(float num1, float num2) {
-    cout << num1 << " * " << num2 << " = " << (num1 * num2) << endl;
-}
-
-void divide(float num1, float num2){
-    cout << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
-}
 
 int get_num(bool first) {
     float num{};
@@ -42,16 +27,16 @@ void get_op () {
     float num2 = get_num(false);
     switch (opt) {
         case 1:{
-                   add(num1,num2);
+                   cout << plus<>{}(num1,num2) << endl;
                } break;
         case 2:{
-                   subtract(num1,num2);
+                   cout << minus<>{}(num1,num2) << endl;
                } break;
         case 3:{
-                   multiply(num1,num2);
+                   cout << multiplies<>{}(num1,num2) << endl;
                } break;
         case 4:{
-                   divide(num1,num2);
+                   cout << divides<>{}(num1,num2) << endl;
                } break;
         default:{
                     cout << "not a valid option!" << endl;
