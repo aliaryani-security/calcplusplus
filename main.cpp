@@ -1,4 +1,3 @@
-#include <functional>
 #include <iostream>
 using namespace std;
 
@@ -38,6 +37,21 @@ int main() {
     int opt {get_op()};
     float num1 = get_num(true);
     float num2 = get_num(false);
+
+    switch (opt) {
+        case 1:
+            cout << num1 << " + " << num2 << " = " << (num1+num2) << endl;
+            break;
+        case 2:
+            cout << num1 << " - " << num2 << " = " << (num1-num2) << endl;
+            break;
+        case 3:
+            cout << num1 << " * " << num2 << " = " << (num1*num2) << endl;
+            break;
+        case 4:
+            cout << num1 << " / " << num2 << " = " << (num1/num2) << endl;
+            break;
+    }
 
 
     return 0;
