@@ -21,14 +21,26 @@ auto get_op () {
         << "2. Subtraction" << endl 
         << "3. Multiplication" << endl
         << "4. Division" << endl;
-    cout << "=> ";
+    while(true) {
+        cout << "=> ";
+        cin >> opt;
+        if(opt==1 || opt==2 || opt==3 || opt==4){
+            break;
+        } else {
+            cout << "Unknown option! try again." << endl;
+        }
+    }
+    return opt;
+    
 }
 
 int main() {
-    get_op();
+    int opt {get_op()};
     float num1 = get_num(true);
     float num2 = get_num(false);
 
 
     return 0;
 }
+
+
